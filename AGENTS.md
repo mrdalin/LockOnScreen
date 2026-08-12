@@ -45,7 +45,7 @@ LockOnScreen/
 ```
 
 ## 当前状态与下一步
-- **v1.0.0**（已发布）：三键 OSD、托盘 Caps 联动、开机自启、启动 1.2s/切换 0.5s
+- **v1.0.0**（已发布）：三键 OSD、托盘 Caps 联动、开机自启、启动 1.2s/切换 0.5s、多显示器适配（气泡跟随鼠标所在屏）
 - **待验证**：Win7 真机实机测试（沙箱为 Win10）
-- **待做**：代码签名（消除 SmartScreen 提示）、多显示器适配
+- **已决定不做**：数字签名（SmartScreen「未知发布者」提示接受现状，用户明确放弃）
 - **仓库**：[github.com/mrdalin/LockOnScreen](https://github.com/mrdalin/LockOnScreen)

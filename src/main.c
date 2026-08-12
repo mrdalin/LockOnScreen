@@ -263,15 +263,24 @@ static void OsdRender(void)
 }
 
 /* 定位：屏幕下方居中 */
+/* 定位：鼠标所在显示器底部居中（多显示器适配：按键时气泡跟随鼠标所在屏幕） */
 static void OsdPosition(HWND hwnd)
 {
     RECT rc;
-    int sw = GetSystemMetrics(SM_CXSCREEN);
-    int sh = GetSystemMetrics(SM_CYSCREEN);
+    POINT pt;
+    HMONITOR mon;
+    MONITORINFO mi;
+    RECT work;
     GetWindowRect(hwnd, &rc);
+    GetCursorPos(&pt);
+    mon = MonitorFromPoint(pt, MONITOR_DEFAULTTONEAREST);
+    mi.cbSize = sizeof(mi);
+    if (!GetMonitorInfoW(mon, &mi))
+        return;
+    work = mi.rcWork; /* 工作区（排除任务栏） */
     SetWindowPos(hwnd, HWND_TOPMOST,
-                 sw / 2 - (rc.right - rc.left) / 2,
-                 sh - (rc.bottom - rc.top) - BOTTOM_GAP,
+                 work.left + (work.right - work.left) / 2 - (rc.right - rc.left) / 2,
+                 work.bottom - (rc.bottom - rc.top) - BOTTOM_GAP,
                  0, 0, SWP_NOSIZE | SWP_NOACTIVATE);
 }
 
