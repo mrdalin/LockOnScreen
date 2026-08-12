@@ -45,7 +45,8 @@
 
 ## 关于杀毒/SmartScreen 提示
 
-本程序由官方 GCC 工具链干净编译，不加壳、不混淆、无注入等敏感行为，主流杀软一般不报。但 Microsoft SmartScreen 对**无数字签名**的新程序仍可能提示「未知发布者 / 已阻止」，这是签名缺失导致，并非病毒。彻底消除需购买代码签名证书（OV/EV）后对 exe 签名；本版本先以干净编译交付，后续可补签名。
+本程序由官方 GCC 工具链干净编译，不加壳、不混淆、无注入等敏感行为，主流杀软一般不报。
+Microsoft SmartScreen 对**无数字签名**的新程序仍可能提示「未知发布者 / 已阻止」，本项目已决定接受此现状，不再计划购买签名证书。
 
 ## 构建（可选）
 
@@ -69,6 +70,7 @@ LockOnScreen/
 ├── scripts/make_ico.ps1   # ICO 生成脚本
 ├── scripts/check_ico.ps1  # ICO 像素检查脚本
 ├── scripts/test_render.cpp # OSD 渲染验证工具
+├── AGENTS.md            # Agent 规则文件（五要素）
 ├── dist/                  # 成品 exe
 └── README.md
 ```
