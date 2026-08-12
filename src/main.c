@@ -381,7 +381,7 @@ static void OsdCreate(void)
     OsdPosition(g_hOsd);
 }
 
-static void OsdShow(int key, BOOL on)
+static void OsdShow(int key, BOOL on, UINT showMs)
 {
     g_showKey = key;
     g_showOn  = on;
@@ -400,7 +400,7 @@ static void OsdShow(int key, BOOL on)
     OsdPosition(g_hOsd);
     ShowWindow(g_hOsd, SW_SHOWNA); /* 确保可见（UpdateLayeredWindow 不改变可见性） */
     OsdCommit(g_alpha); /* 提交并显示 */
-    SetTimer(g_hMain, TMR_SHOW, SHOW_MS, NULL); /* 显示计时，到时开始淡出 */
+    SetTimer(g_hMain, TMR_SHOW, showMs, NULL); /* 显示计时，到时开始淡出 */
 }
 
 /* 开始淡出并最终隐藏 */
@@ -492,14 +492,14 @@ static LRESULT CALLBACK MainWndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp)
             BOOL capsOn = IsKeyOn(g_vk[0]);
             if (capsOn != g_last[0]) {
                 g_last[0] = capsOn;
-                OsdShow(0, capsOn);
+                OsdShow(0, capsOn, SHOW_MS);
                 UpdateTrayCaps(capsOn); /* 托盘图标联动：仅 Caps */
             }
             for (i = 1; i < KEY_COUNT; i++) {
                 BOOL on = IsKeyOn(g_vk[i]);
                 if (on != g_last[i]) {
                     g_last[i] = on;
-                    OsdShow(i, on);
+                    OsdShow(i, on, SHOW_MS);
                 }
             }
         } else if (wp == TMR_SHOW) {
@@ -598,8 +598,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpCmd, int nShow)
     g_hMain = CreateWindowExW(0, L"CapsMainClass", L"LockOnScreen",
                               0, 0, 0, 0, 0, NULL, NULL, hInstance, NULL);
 
-    /* 启动提示：显示一次 Caps Lock 当前状态 */
-    OsdShow(0, g_last[0]);
+    /* 启动提示：显示一次 Caps Lock 当前状态，时长 1.2s（比切换提示更久，便于看到） */
+    OsdShow(0, g_last[0], 1200);
     UpdateTrayCaps(g_last[0]); /* 托盘图标同步 Caps 状态 */
 
     while (GetMessageW(&msg, NULL, 0, 0) > 0) {
