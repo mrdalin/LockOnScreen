@@ -1,6 +1,6 @@
 # LockOnScreen
 
-键盘切换键状态提示工具 —— 按下 **Caps Lock / Num Lock / Scroll Lock** 时，在屏幕下方居中显示当前开关状态气泡，约 0.5 秒后自动淡出。
+键盘切换键状态提示工具 —— 按下 **Caps Lock / Num Lock / Scroll Lock** 时，在屏幕下方居中显示当前开关状态气泡，约 0.5 秒后自动淡出（首次启动提示显示 1.2 秒）。
 
 ## 功能
 
@@ -15,7 +15,7 @@
 - 后台运行，托盘图标常驻（右键菜单：开机自启开关 / 退出）
 - **托盘图标与 Caps Lock 状态联动**：大写开=黄色 `A`(科技蓝底)，大写关=灰色 `a`(科技蓝底)，悬停提示同步显示
 - 启动时自动显示一次 Caps Lock 当前状态提示
-- OSD 气泡显示约 0.5 秒后淡出；GDI+ 抗锯齿圆角、垂直渐变背景、柔和投影、高光描边、加粗文字
+- OSD 气泡显示约 0.5 秒后淡出（启动提示 1.2 秒）；GDI+ 抗锯齿圆角、垂直渐变背景、深色细描边、加粗文字
 - **图标**：科技蓝圆角方块 + 白色加粗字符，三边等距布局
 - 开机自启：**以管理员身份运行** → 写入 `HKLM`（所有用户生效）；普通权限运行 → 写入 `HKCU`（当前用户生效）。值均为本 exe 完整路径
 - 单文件、绿色免安装，可放任意目录运行（建议放固定位置，自启依赖路径）
@@ -29,7 +29,7 @@
 ## 兼容性与体积
 
 - 32 位单文件，Windows 7 / 10 / 11（32 位与 64 位均可）运行，仅依赖系统自带 DLL（含 GDI+，即 gdiplus.dll，Win7 自带）
-- 成品约 171 KB（远小于 1 MB 限制）
+- 成品约 166 KB（远小于 1 MB 限制）
 
 ## Win7 实机验证清单（本工具在 Win10 沙箱验证，以下建议在目标机器确认）
 
@@ -60,10 +60,14 @@ g++ -Wall -Wextra -O2 -mwindows -s -o dist/LockOnScreen.exe src/main.c res/app.o
 
 ```
 LockOnScreen/
-├── src/main.c        # 全部源码（约 410 行）
-├── res/app.ico       # 应用图标（标准 ICO，由脚本生成）
-├── res/app.rc        # 图标 + 版本资源
-├── scripts/make_ico.ps1  # ICO 生成脚本
-├── dist/             # 成品 exe
+├── src/main.c             # 全部源码（约 610 行）
+├── res/app.ico            # 应用图标（标准 ICO，由脚本生成）
+├── res/app.rc             # 图标 + 版本资源
+├── res/caps_on.ico        # 托盘黄 A（Caps 开）
+├── res/caps_off.ico       # 托盘灰 a（Caps 关）
+├── scripts/make_ico.ps1   # ICO 生成脚本
+├── scripts/check_ico.ps1  # ICO 像素检查脚本
+├── scripts/test_render.cpp # OSD 渲染验证工具
+├── dist/                  # 成品 exe
 └── README.md
 ```
