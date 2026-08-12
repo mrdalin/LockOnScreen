@@ -196,18 +196,6 @@ static void OsdRender(void)
         path.CloseFigure();
     }
 
-    /* 对称投影：主体下移 2px 的半透明黑圆角矩形（四角完全一致） */
-    {
-        GraphicsPath sh;
-        sh.AddPath(&path, TRUE);
-        {
-            Matrix m(1.0f, 0, 0, 1.0f, 0, 2.0f); /* 平移 (0,2) */
-            sh.Transform(&m);
-        }
-        SolidBrush shBrush(Color(60, 0, 0, 0));
-        g.FillPath(&shBrush, &sh);
-    }
-
     /* 背景：垂直渐变（顶部略亮 → 底部略暗，立体感） */
     {
         LinearGradientBrush bgBrush(Point(0, 0), Point(0, g_osdH),
@@ -215,9 +203,9 @@ static void OsdRender(void)
         g.FillPath(&bgBrush, &path);
     }
 
-    /* 顶部高光描边（半透明白 1px，磨砂玻璃质感） */
+    /* 深色细描边：锐化边缘轮廓（替代半透明白高光，避免白边发糊） */
     {
-        Pen edgePen(Color(72, 255, 255, 255), 1.0f);
+        Pen edgePen(Color(140, 40, 42, 50), 1.0f);
         g.DrawPath(&edgePen, &path);
     }
 
