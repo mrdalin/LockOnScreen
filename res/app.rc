@@ -1,0 +1,34 @@
+// 应用图标：exe 文件图标 + 托盘图标
+// 1 = 白色 A（应用/默认），2 = 黄色 A（Caps 开），3 = 灰色 a（Caps 关）
+1 ICON "app.ico"
+2 ICON "caps_on.ico"
+3 ICON "caps_off.ico"
+
+// 版本资源（辅助防误报：显示正常的产品信息）
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION     1,0,0,0
+ PRODUCTVERSION  1,0,0,0
+ FILEFLAGSMASK   0x3fL
+ FILEFLAGS       0x0L
+ FILEOS          0x40004L
+ FILETYPE        0x1L
+ FILESUBTYPE     0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName",      "LockOnScreen"
+            VALUE "FileDescription",  "LockOnScreen - Caps/Num/Scroll Lock Indicator"
+            VALUE "FileVersion",      "1.0.0.0"
+            VALUE "InternalName",     "LockOnScreen"
+            VALUE "OriginalFilename", "LockOnScreen.exe"
+            VALUE "ProductName",      "LockOnScreen"
+            VALUE "ProductVersion",   "1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0804, 1200
+    END
+END

@@ -1,0 +1,8 @@
+# 构建产物
+dist/
+res/app.o
+
+# 临时文件
+osd_render.png
+*.log
+.DS_Store

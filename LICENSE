@@ -1,0 +1,23 @@
+                    GNU AFFERO GENERAL PUBLIC LICENSE
+                       Version 3, 19 November 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+ 本仓库基于 gzh-design skill（https://github.com/isjiamu/gzh-design-skill）改造而来，
+ 原 skill 与本项目均采用 GNU Affero General Public License v3 (AGPL-3.0)。
+
+ 作为通过网络服务器向公众提供服务的程序，AGPL-3.0 要求你向使用者提供对应的
+ 完整源代码。本项目以公开仓库形式发布即满足此要求；在线版本的页脚也提供了源码链接。
+
+ 完整许可证文本见：https://www.gnu.org/licenses/agpl-3.0.txt
+
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU Affero General Public License as published by the Free
+ Software Foundation, either version 3 of the License, or (at your option) any
+ later version.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
