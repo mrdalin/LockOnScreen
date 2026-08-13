@@ -4,7 +4,7 @@
 
 ## 功能
 
-![软件运行动态图](https://i.ibb.co/WQGx5mr/locklook.webp)
+![软件运行动态图](https://i.ibb.co/nqnJvVTp/locklook.webp)
 
 *软件运行动态图：按下 Caps/Num/Scroll 时屏幕下方弹出状态气泡，0.5 秒后淡出*
 
