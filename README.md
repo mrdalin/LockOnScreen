@@ -6,9 +6,15 @@
 
 ![软件运行动态图](https://i.ibb.co/WQGx5mr/locklook.webp)
 
+*软件运行动态图：按下 Caps/Num/Scroll 时屏幕下方弹出状态气泡，0.5 秒后淡出*
+
 ![各状态截图](https://i.ibb.co/MxpqWJt4/image.png)
 
+*各状态截图：大写开/大写关、数字开/数字关、滚动开/滚动关的图标与文字显示*
+
 ![软件大小](https://i.ibb.co/Q33w0srS/image.png)
+
+*软件大小：单个 exe 约 171 KB，绿色免安装*
 
 | 键 | 开 | 关 |
 |---|---|---|
