@@ -1,5 +1,7 @@
 # LockOnScreen
 
+![运行效果](https://i.ibb.co/6RWmsfj5/Pix-Pin-2026-08-13-09-49-32.gif)
+
 键盘切换键状态提示工具 —— 按下 **Caps Lock / Num Lock / Scroll Lock** 时，在屏幕下方居中显示当前开关状态气泡，约 0.5 秒后自动淡出（首次启动提示显示 1.2 秒）。
 
 ## 功能
