@@ -70,3 +70,4 @@
 - 已决定不做：数字签名（SmartScreen「未知发布者」提示接受现状）
 
 [2.0.0]: https://github.com/mrdalin/LockOnScreen/releases/tag/v2.0.0
+[1.0.0]: https://github.com/mrdalin/LockOnScreen/releases/tag/v1.0.0
