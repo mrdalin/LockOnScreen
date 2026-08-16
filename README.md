@@ -64,8 +64,8 @@
 - [ ] Win10 / Win11：切换中/英即时弹出气泡（键盘钩子通道），全/半角切换显示「·全角/·半角」
 - [ ] 管理员身份运行后，`HKLM\Software\Microsoft\Windows\CurrentVersion\Run` 出现 `LockOnScreen`，重启后自动启动
 - [ ] 普通权限运行后，`HKCU\Software\Microsoft\Windows\CurrentVersion\Run` 出现对应值
-- [ ] 托盘图标随 Caps Lock 状态变化（黄 A=开/灰 a=关，科技蓝底，悬停文字同步）
-- [ ] 托盘右键菜单：开机自启开关 / 显示项勾选（含输入法状态）/ 退出均正常
+- [ ] 托盘图标随 Caps Lock 状态变化（黄 A=开/灰 a=关，悬停文字同步）
+- [ ] 托盘右键菜单：开机自启 / 显示时长 / 透明度 / 显示设置 / 退出均正常
 - [ ] 启动时提示一次 Caps Lock 当前状态（大写开/大写关）
 - [ ] 多显示器时气泡定位跟随鼠标所在屏幕（默认跟随光标，可切换正中/角落/屏幕边缘）
 
@@ -90,7 +90,7 @@ g++ -Wall -Wextra -O2 -mwindows -s -o dist/LockOnScreen.exe src/main.c res/app.o
 
 ```
 LockOnScreen/
-├── src/main.c             # 全部源码（约 2400 行）
+├── src/main.c             # 全部源码（约 2460 行）
 ├── res/app.ico            # 应用图标（标准 ICO，由脚本生成）
 ├── res/app.rc             # 图标 + 版本资源
 ├── res/caps_on.ico        # 托盘黄 A（Caps 开）
