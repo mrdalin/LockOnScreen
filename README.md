@@ -2,19 +2,20 @@
 
 键盘切换键状态提示工具 —— 按下 **Caps Lock / Num Lock / Scroll Lock** 时，在鼠标附近弹出当前开关状态气泡；**切换中/英文输入法时**同样弹出气泡提示，默认 0.8 秒后自动淡出（首次启动提示显示 1.2 秒）。
 
+> **v2.0.0** 已发布：[功能总结与更新记录 CHANGELOG](CHANGELOG.md) · [GitHub Releases](https://github.com/mrdalin/LockOnScreen/releases)
+
 ## 功能
 
-![软件运行动态图](https://i.ibb.co/nqnJvVTp/locklook.webp)
+<video src="res/img/演示视频.mp4" width="640" controls muted></video>
 
-*软件运行动态图（早期深色 UI 版本示意）：按下 Caps/Num/Scroll 时弹出状态气泡后淡出*
+<p align="center"><em>演示视频：按下 Caps/Num/Scroll 弹出状态气泡、切换中英文输入法弹出输入法气泡（480 KB，GitHub 仓库内）</em></p>
 
-![各状态截图](https://i.ibb.co/MxpqWJt4/image.png)
-
-*各状态截图（早期深色 UI 版本）：大写开/大写关、数字开/数字关、滚动开/滚动关的图标与文字显示；当前版本为亮色 Fluent 风格 + 三键专属色*
-
-![软件大小](https://i.ibb.co/Q33w0srS/image.png)
-
-*软件大小：单个 exe 约 205 KB，绿色免安装*
+| 状态 | 截图 | 状态 | 截图 |
+|---|---|---|---|
+| Caps Lock 开 | ![Caps开](res/img/大开.jpg) | Caps Lock 关 | ![Caps关](res/img/大关.jpg) |
+| Num Lock 开 | ![Num开](res/img/N开.jpg) | Num Lock 关 | ![Num关](res/img/N关.jpg) |
+| Scroll Lock 开 | ![Scroll开](res/img/S开.jpg) | Scroll Lock 关 | ![Scroll关](res/img/S关.jpg) |
+| 中文输入法 | ![中文](res/img/中文.jpg) | 英文输入法 | ![英文](res/img/英文.jpg) |
 
 | 键 | 开 | 关 |
 |---|---|---|
@@ -94,11 +95,13 @@ LockOnScreen/
 ├── res/app.rc             # 图标 + 版本资源
 ├── res/caps_on.ico        # 托盘黄 A（Caps 开）
 ├── res/caps_off.ico       # 托盘灰 a（Caps 关）
+├── res/img/               # README 截图与演示视频
 ├── scripts/make_ico.ps1   # ICO 生成脚本
 ├── scripts/check_ico.ps1  # ICO 像素检查脚本
 ├── scripts/test_render.cpp # OSD 渲染验证工具
 ├── scripts/test_tsf.cpp   # TSF+IMM 输入法检测验证工具
 ├── scripts/test_ime_live.cpp # 实时输入法状态诊断（ImTip 方式，验证通道有效性）
+├── CHANGELOG.md         # 版本更新记录
 ├── AGENTS.md            # Agent 规则文件
 ├── dist/                  # 成品 exe（git 忽略）
 └── README.md
