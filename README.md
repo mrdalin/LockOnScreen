@@ -57,6 +57,22 @@
 - 成品单个 exe 约 205 KB（远小于 1 MB 限制）
 - 输入法监测：实时读取前台窗口输入法状态（ImTip/aardio 方式，`WM_IME_CONTROL` 按位判定中英/全角）+ 键盘钩子热键翻转兜底（Shift/Ctrl+Space/Shift+Space/Win+Space）+ TSF 事件强制重读
 
+## 下载校验
+
+从 [GitHub Releases](https://github.com/mrdalin/LockOnScreen/releases) 下载 `LockOnScreen.exe` 后，可用以下命令校验文件完整性（防止传输损坏/被篡改）：
+
+```powershell
+# 校验 v2.0.0 的 LockOnScreen.exe（209,920 字节）
+Get-FileHash .\LockOnScreen.exe -Algorithm SHA256
+# 期望值：40c827edec36101c00f95bcafe994204c816f36ca2492084f857502fcacaf0bf
+```
+
+| 版本 | 文件 | SHA-256 |
+|---|---|---|
+| v2.0.0 | LockOnScreen.exe (209,920 B) | `40c827edec36101c00f95bcafe994204c816f36ca2492084f857502fcacaf0bf` |
+
+> 校验值已与 GitHub Release 上传的附件逐一核对一致。
+
 ## Win7 实机验证清单（本工具在 Win10 沙箱验证，以下建议在目标机器确认）
 
 - [ ] Win7 32 位 / 64 位：双击运行、按键气泡显示正常
