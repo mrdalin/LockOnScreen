@@ -47,7 +47,7 @@ LockOnScreen/
 ├── CHANGELOG.md            # 版本更新记录（v1.0.0 → v2.0.0）
 ├── README.md               # 用户文档（含演示视频/截图/构建说明）
 ├── .gitignore             # dist/ 参考目录/测试exe 忽略
-├── LICENSE                # AGPL-3.0
+├── LICENSE                # MIT
 └── dist/LockOnScreen.exe  # 发布成品（git 忽略）
 ```
 
@@ -65,6 +65,6 @@ LockOnScreen/
 ## 维护与交接要点
 - **发布流程**：本地提交 → tag → GitHub 推送 → Releases（可参考仓库历史与 CHANGELOG 格式）。国内直连 GitHub 常 SSL 失败，需经代理（`git -c http.proxy=...`）；HTTPS push 需 PAT（GitHub 已取消密码登录）
 - **验证手段（无 GUI 依赖）**：`PrintWindow(PW_RENDERFULLCONTENT)` 抓分层窗口（OSD）；`GetWindowDC + BitBlt` 抓自绘窗口（设置界面）；`CopyFromScreen` 受 DPI/遮挡影响不可靠。诊断工具日志写 `test_ime_live.log`
-- **已知取舍（接受现状）**：无数字签名（SmartScreen「未知发布者」，用户明确放弃）；AGPL-3.0；少量可接受小泄漏（`wc.hbrBackground` 画刷不删等）；菜单/设置对话框打开期间 ImePoll 跳过（避免误触发）
+- **已知取舍（接受现状）**：无数字签名（SmartScreen「未知发布者」，用户明确放弃）；MIT 开源协议；少量可接受小泄漏（`wc.hbrBackground` 画刷不删等）；菜单/设置对话框打开期间 ImePoll 跳过（避免误触发）
 - **待验证**：Win7 实机（IMM 兜底通道）、搜狗/QQ/百度第三方输入法兼容性精测
 - **仓库**：[github.com/mrdalin/LockOnScreen](https://github.com/mrdalin/LockOnScreen)（main 分支，Release v2.0.0）

@@ -1,23 +1,21 @@
-                    GNU AFFERO GENERAL PUBLIC LICENSE
-                       Version 3, 19 November 2007
+MIT License
 
- Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
- Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
+Copyright (c) 2026 mrdalin
 
- 本仓库基于 gzh-design skill（https://github.com/isjiamu/gzh-design-skill）改造而来，
- 原 skill 与本项目均采用 GNU Affero General Public License v3 (AGPL-3.0)。
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
- 作为通过网络服务器向公众提供服务的程序，AGPL-3.0 要求你向使用者提供对应的
- 完整源代码。本项目以公开仓库形式发布即满足此要求；在线版本的页脚也提供了源码链接。
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
- 完整许可证文本见：https://www.gnu.org/licenses/agpl-3.0.txt
-
- This program is free software: you can redistribute it and/or modify it under
- the terms of the GNU Affero General Public License as published by the Free
- Software Foundation, either version 3 of the License, or (at your option) any
- later version.
-
- This program is distributed in the hope that it will be useful, but WITHOUT ANY
- WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
- PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
