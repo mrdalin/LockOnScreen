@@ -2,6 +2,15 @@
 dist/
 res/app.o
 
+# 第三方参考项目（本地研究用，不发布到仓库）
+ImTip_ref/
+LangIndicator_ref/
+
+# 测试/诊断二进制、备份与临时产物
+*.exe
+*.bin
+src/main.c.v1.bak
+
 # 临时文件
 osd_render.png
 *.log
